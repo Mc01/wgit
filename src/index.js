@@ -7,6 +7,7 @@ const dispatcher = new Dispatcher(loader);
 
 dispatcher.register(cli, 'init', dispatcher.actionInit.bind(dispatcher));
 dispatcher.register(cli, 'list', dispatcher.actionList.bind(dispatcher));
+dispatcher.register(cli, 'expose', dispatcher.actionExpose.bind(dispatcher));
 dispatcher.register(cli, 'status <tag>', dispatcher.actionDelegate.bind(dispatcher));
 dispatcher.register(cli, 'submodule <tag>', dispatcher.actionDelegate.bind(dispatcher));
 dispatcher.register(cli, 'branch <tag>', dispatcher.actionDelegate.bind(dispatcher));

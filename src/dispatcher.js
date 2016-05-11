@@ -14,7 +14,7 @@ class Dispatcher {
 
   actionInit() {
     let root = path.dirname(this.loader.root);
-    let template = path.join(root, '../src/templates/template.json');
+    let template = path.join(root, '../templates/template.json');
     let target = path.join(this.loader.home, '.wgit.json');
     let cmd = `cp ${template} ${target}`;
     wgit.executeAction(cmd)
@@ -69,6 +69,12 @@ class Dispatcher {
     .catch((msg) => {
       console.log(chalk.red(msg));
     });
+  }
+
+  actionExpose() {
+    let root = path.dirname(this.loader.root);
+    let template = path.join(root, '../templates/init.sh');
+    console.log(template);
   }
 
   actionDelegate(tag) {
