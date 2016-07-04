@@ -53,7 +53,7 @@ class Dispatcher {
   }
 
   executeSub(res, repo, dir) {
-    let sub = `git -C ${dir} submodule | cut -d\' \' -f3`;
+    let sub = `git -C ${dir} submodule | sed -e 's/+/ /' | cut -d ' ' -f3`;
     wgit.executeAction(sub)
     .then((resSub) => {
       let modules = resSub.message.trim().split('\n').filter((i) => i !== '');
