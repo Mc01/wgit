@@ -2,8 +2,6 @@
 
 [![Build Status][travis-image]][travis-url]
 [![Coverage Status][coveralls-image]][coveralls-url]
-[![Dependency Status][david-image]][david-url]
-[![devDependency Status][david-dev-image]][david-dev-url]
 
 Depreciated! Project is no longer continued! <br />
 Simple cli for managing multiple projects in git
